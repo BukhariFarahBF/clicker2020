@@ -9,8 +9,33 @@
     <meta name="author" content="ohiofi">
 
     <style>
+      img {
+        margin-right: auto;
+        margin-left: auto;
+        display: block;
+        width: 200px;
+      }
       #photo1, #photo2, #photo3 {
         display:none
+      }
+      #bronzeMedal {
+      display: none;
+      }
+      #silverMedal {
+      display: none;
+      }
+      #goldMedal {
+      display: none;
+      }
+      button {
+      margin-right: auto;
+      margin-left: auto;
+      display: block;
+      margin-bottom: 10px;
+      margin-top: 10px;
+      }
+      h1 {
+      text-align: center;
       }
 
 
@@ -22,13 +47,15 @@
 
   </head>
   <body>
-    <h1 id= "score">your score is 0</h1>
+    <h1 id= "score">Your score is 0</h1>
     <button onclick="myFunction()">Click me</button>
     <br>
     <img src="images (1).jpg" alt="cute image" id="photo1">
     <img src="images.jpg" alt="cute image" id="photo2">
     <img src="tenor.gif" alt="cute image" id="photo3">
-    <script src="script.js"></script>
+    <img id="bronzeMedal" src="https://js-clicker-game.colegermaine.repl.co/Images/bronze%20medal.jpg" alt="Bronze Medal">
+    <img id="silverMedal" src="https://js-clicker-game.colegermaine.repl.co/Images/silver%20medal.jpg" alt="Silver Medal">
+    <img id="goldMedal" src="https://js-clicker-game.colegermaine.repl.co/Images/gold%20medal.jpg" alt="Gold Medal">
 
 
 
@@ -42,12 +69,24 @@
         document.getElementById("score").innerHTML = "your score is " + clicks
       if (clicks == 10) {
         document.getElementById("photo1").style.display='block';
+        alert('You have reached 10 points');
       }
       if (clicks == 20) {
         document.getElementById("photo2").style.display='block';
+        document.getElementById("bronzeMedal").style.display = 'block';
+        alert('You have reached 20 points');
+      }
+      if (clicks == 25) {
+      document.getElementById('silverMedal').style.display = 'block';
+      alert('You have reached 25 points');
+      }  
+      if (clicks == 35) {
+      document.getElementById('goldMedal').style.display = 'block';
+      alert('You have reached 35 points');
       }
       if (clicks == 40) {
         document.getElementById("photo3").style.display='block';
+      alert('You have reached 40 points');
       }
 }
 
