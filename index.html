@@ -9,6 +9,9 @@
     <meta name="author" content="ohiofi">
 
     <style>
+      #photo1, #photo2, #photo3 {
+        display:none
+      }
 
 
 
@@ -19,13 +22,34 @@
 
   </head>
   <body>
-
+    <h1 id= "score">your score is 0</h1>
+    <button onclick="myFunction()">Click me</button>
+    <br>
+    <img src="images (1).jpg" alt="cute image" id="photo1">
+    <img src="images.jpg" alt="cute image" id="photo2">
+    <img src="tenor.gif" alt="cute image" id="photo3">
+    <script src="script.js"></script>
 
 
 
 
 
     <script>
+      var clicks 
+      clicks = 0
+      function myFunction() {
+        clicks += 1
+        document.getElementById("score").innerHTML = "your score is " + clicks
+      if (clicks == 10) {
+        document.getElementById("photo1").style.display='block';
+      }
+      if (clicks == 20) {
+        document.getElementById("photo2").style.display='block';
+      }
+      if (clicks == 40) {
+        document.getElementById("photo3").style.display='block';
+      }
+}
 
 
 
