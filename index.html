@@ -13,7 +13,17 @@
         display:none
       }
 
+      #five{
+      display:none;
+      }
 
+    #ten{
+      display:none;
+    }
+
+    #twenty{
+      display:none;
+    }
 
 
 
@@ -28,8 +38,11 @@
     <img src="images (1).jpg" alt="cute image" id="photo1">
     <img src="images.jpg" alt="cute image" id="photo2">
     <img src="tenor.gif" alt="cute image" id="photo3">
+    <img src="https://repl.it/@TreFoley/Clicker-Game#Five.png" alt="Five" id="five" width="250">
+    <img src="https://repl.it/@TreFoley/Clicker-Game#10.png" alt="ten" id="ten" width="250">
+    <img src="https://repl.it/@TreFoley/Clicker-Game#20.png" alt="twenty" id="twenty" width="250">
     <script src="script.js"></script>
-
+  
 
 
 
@@ -40,17 +53,24 @@
       function myFunction() {
         clicks += 1
         document.getElementById("score").innerHTML = "your score is " + clicks
+        if (clicks == 5) {
+        document.getElementById("five).style.display='block';
+      }
       if (clicks == 10) {
         document.getElementById("photo1").style.display='block';
+        document.getElementById("five").style.display = "none";
+        document.getElementById("ten").style.display = "block";
       }
       if (clicks == 20) {
         document.getElementById("photo2").style.display='block';
+        document.getElementById("ten").style.display = "none";
+        document.getElementById("twenty").style.display = "block";
       }
       if (clicks == 40) {
         document.getElementById("photo3").style.display='block';
       }
 }
-
+ 
 
 
 
