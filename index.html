@@ -40,6 +40,8 @@
 
       #five{
       display:none;
+        
+        
       }
 
     #ten{
@@ -50,6 +52,17 @@
       display:none;
     }
 
+ #kd{
+      display:none;
+    }
+
+    #kd2{
+      display:none;
+    }
+
+    #kobe{
+      display:none;
+    }
 
 
 
@@ -120,7 +133,40 @@
         }
   }
 
+<script type="text/javascript">
+		var clicks = 0;
+		
+		
+    function counterAddOne() {
+        clicks += 1;
+        document.getElementById("counter").innerHTML = clicks;
+        if (clicks == 5) {
+      document.getElementById("kd").style.display = "inline";
+		} else if (clicks == 10) {
+      document.getElementById("kd").style.display = "none";
+      document.getElementById("kd2").style.display = "inline";
+    } else if (clicks == 20) {
+      document.getElementById("kd2").style.display = "none";
+      document.getElementById("kobe").style.display = "inline";
+    }
 
+    }
+  
+    
+	</script>
+	
+	<button onclick="counterAddOne()">Click me</button>
+
+  <p id="counter"></p>
+
+  <br>
+
+  <img src="kd.jpg" alt="kd" id="kd" width="250">
+  <img src="kd2.jpg" alt="kd2" id="kd2" width="250">
+  <img src="kobe.jpg" alt="kobe" id="kobe" width="250">
+
+
+<p id="demo"></p>
 
 
 
